@@ -22,7 +22,26 @@ console.log(smoothie2("pineapple"));
 // prints "I'm having a smoothie with apples and bananas and berries and pineapple"
 ***********************************************************************/
 
-// your code here
+const smoothieMachine = (...baseIngredients) => {
+  let str = "I'm having a smoothie with ";
+  for (let i = 0; i < baseIngredients.length; i++) {
+    if (str.endsWith(" ")) {
+      str += baseIngredients[i];
+    } else {
+      str += ` and ${baseIngredients[i]}`;
+    }
+  }
+  return (...ingredients) => {
+    for (let i = 0; i < ingredients.length; i++) {
+      if (str.endsWith(" ")) {
+        str += ingredients[i];
+      } else {
+        str += ` and ${ingredients[i]}`;
+      }
+    }
+    return str;
+  };
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {

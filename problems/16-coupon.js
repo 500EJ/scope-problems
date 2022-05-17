@@ -15,7 +15,15 @@ console.log(twentyPercent([10, 20, 30])); // [ 8, 16, 24 ]
 
 ***********************************************************************/
 
-// your code here!
+const coupon = discount => {
+  return values => {
+    const discounted = [];
+    for (let i = 0; i < values.length; i++) {
+      discounted.push((1 - discount) * values[i]);
+    }
+    return discounted;
+  };
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

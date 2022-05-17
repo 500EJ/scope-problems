@@ -24,7 +24,15 @@ console.log(table2(75)); // STILL prints 6
 
 ***********************************************************************/
 
-// your code here
+const recVolume = height => {
+  const sides = [height];
+  return side => {
+    if (sides.length < 3) sides.push(side);
+    if (sides.length === 3) {
+      return sides.reduce((product, side) => product * side, 1);
+    }
+  };
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

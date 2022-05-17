@@ -18,7 +18,9 @@ funcTimer(5000, partyFunc); // in 5 seconds prints: "Party time!"
 
 ***********************************************************************/
 
-// your code here!
+const funcTimer = (cb, time) => {
+  setTimeout(time, cb);
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
@@ -28,5 +30,3 @@ try {
   // catch the ref err
   module.exports = null;
 }
-
-

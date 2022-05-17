@@ -18,7 +18,13 @@ console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 
 ***********************************************************************/
 
-// your code here!
+const arrowMyMap = (arr, cb) => {
+  const mapped = [];
+  for (let i = 0; i < arr.length; i++) {
+    mapped.push(cb(arr[i]));
+  }
+  return mapped;
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

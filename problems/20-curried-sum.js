@@ -42,7 +42,14 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   be useful
 ***********************************************************************/
 
-// your code here
+const curriedSum = numAddends => {
+  const nums = [];
+  return function sum(addend) {
+    if (nums.length < numAddends) nums.push(addend);
+    if (nums.length >= numAddends) return nums.reduce((sum, n) => sum + n);
+    return sum;
+  };
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
